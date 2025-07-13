@@ -12,7 +12,7 @@ const Chat = () => {
     console.log(socket)
 
     socket.onmessage = (event) => {
-      console.log(event);
+      // console.log(event);
       const recievedObj = {
         ...JSON.parse(event.data),
         alignLeft: true
@@ -27,7 +27,7 @@ const Chat = () => {
   }, [])
  
   const sendMessage = () => {
-    console.log('send message')
+    // console.log('send message')
     if (ws && message.trim() !== "") {
       console.log(message)
       let obj = {
